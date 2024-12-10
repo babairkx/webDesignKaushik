@@ -1,0 +1,180 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  --primary-color: #fcf5e9;
+  --container-wide: 1400px;
+  --container-normal: 1100px;
+  --container-narrow: 900px;
+}
+
+body {
+  font-family: Open Sans, sans-serif;
+  line-height: 1.6;
+}
+
+a {
+  text-decoration: none;
+  color: #333;
+}
+
+ul {
+  list-style: none;
+}
+
+img {
+  max-width: 100%;
+}
+
+/* utility classes */
+.bg-primary {
+  background: var(--primary-color);
+}
+
+.container {
+  max-width: var(--container-normal);
+  margin: 0 auto;
+  padding: 0 1.5rem;
+}
+
+.container-lg {
+  max-width: var(--container-wide);
+}
+
+.container-sm {
+  max-width: var(--container-narrow);
+}
+
+.header {
+  margin: 1.5rem 0;
+}
+
+.header .logo {
+  width: 130px;
+}
+
+.header .header-flex {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.header .main-menu {
+  display: flex;
+  gap: 1rem;
+}
+
+.header .main-menu li a {
+  padding: 0.5rem 1rem;
+}
+
+.header .main-menu li a:hover {
+  background-color: var(--primary-color);
+}
+
+.current {
+  background-color: var(--primary-color);
+  font-weight: 600;
+}
+
+.hero {
+  height: 500px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+.hero h2 {
+  font-size: 3rem;
+  line-height: 1.4;
+  font-weight: normal;
+}
+
+.gallery-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: repeat(3, 1fr);
+  gap: 20px;
+}
+
+.gallery-grid .grid-item img {
+  border-radius: 10px;
+  transition: opacity 1s;
+}
+
+.gallery-grid .grid-item img:hover {
+  opacity: 0.8;
+}
+
+.footer {
+  border-top: 1px solid #aaa;
+  padding-top: 2rem;
+  margin: 2rem 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.footer .footer-logo a img {
+  width: 120px;
+  height: 30px;
+}
+
+.footer .footer-contact {
+  text-align: center;
+}
+
+.services {
+  background: #333;
+  color: whitesmoke;
+  line-height: 2rem;
+  padding: 1.5rem;
+}
+
+.services .services-header,
+.team .team-header {
+  text-align: center;
+  margin: 1rem;
+}
+
+.services .services-detail,
+.team .team-detail {
+  display: flex;
+  gap: 1rem;
+}
+
+.team .team-detail .team-image img {
+  border-radius: 10px;
+}
+
+@media (max-width: 768px) {
+
+  .header .header-flex,
+  .team .team-detail,
+  .services .services-detail {
+    flex-direction: column;
+    gap: 1.5rem;
+  }
+
+  .hero {
+    height: 300px;
+  }
+
+  .hero h2 {
+    font-size: 1.8rem;
+  }
+
+  .gallery-grid {
+    grid-template-columns: repeat(1, 1fr);
+    grid-template-rows: repeat(9, 1fr);
+  }
+
+  .footer {
+    display: block;
+    text-align: center;
+  }
+}
