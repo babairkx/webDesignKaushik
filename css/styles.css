@@ -185,23 +185,30 @@ img {
 .contact .form-group .form-element textarea {
   border: none;
   border-bottom: 1px solid #333;
-  width: 100%;
+  width: 60%;
   font-family: inherit;
   outline: none;
-  padding: 1rem 0.3rem;
+  padding: 1rem 0.3rem 0rem;
+}
+
+.contact .form-group .form-element {
+  width: 80%;
+  margin: 0 auto;
+  text-align: center;
 }
 
 .contact .form-group .form-element .btn {
-  width: 100%;
+  width: 40%;
   font-family: inherit;
   padding: 1rem 0.3rem;
   margin-top: 1.5rem;
   border: 1px solid #333;
-  background-color: rgba(0, 0, 0, 0);
+  background-color: rgba(196, 246, 198, 0.5);
+  border-radius: 5px;
+  font-weight: 600;
 }
 
 .contact .form-group .form-element textarea {
-  height: 5rem;
   resize: none;
 }
 
@@ -230,5 +237,11 @@ img {
   .footer {
     display: block;
     text-align: center;
+  }
+
+  .contact .form-group .form-element input,
+  .contact .form-group .form-element textarea,
+  .contact .form-group .form-element {
+    width: 100%;
   }
 }
