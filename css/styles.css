@@ -6,6 +6,7 @@
 
 :root {
   --primary-color: #fcf5e9;
+  --dark-color: #333;
   --container-wide: 1400px;
   --container-normal: 1100px;
   --container-narrow: 900px;
@@ -32,6 +33,26 @@ img {
 /* utility classes */
 .bg-primary {
   background: var(--primary-color);
+  color: #333;
+}
+
+.bg-dark {
+  background: var(--dark-color);
+  color: #fff;
+}
+
+.bg-dark .bg-primary {
+  padding: 0 0.3rem;
+}
+
+.visually-hidden {
+  clip: rect(0 0 0 0);
+  clip-path: inset(50%);
+  height: 1px;
+  overflow: hidden;
+  position: absolute;
+  white-space: nowrap;
+  width: 1px;
 }
 
 .container {
@@ -48,6 +69,7 @@ img {
   max-width: var(--container-narrow);
 }
 
+/* unique clases */
 .header {
   margin: 1.5rem 0;
 }
@@ -129,8 +151,6 @@ img {
 }
 
 .services {
-  background: #333;
-  color: whitesmoke;
   line-height: 2rem;
   padding: 1.5rem;
 }
@@ -149,6 +169,40 @@ img {
 
 .team .team-detail .team-image img {
   border-radius: 10px;
+}
+
+.contact .contact-header,
+.contact .contact-message {
+  margin: 1.2rem 0;
+  text-align: center;
+}
+
+.contact .contact-message h4 {
+  font-weight: 600;
+}
+
+.contact .form-group .form-element input,
+.contact .form-group .form-element textarea {
+  border: none;
+  border-bottom: 1px solid #333;
+  width: 100%;
+  font-family: inherit;
+  outline: none;
+  padding: 1rem 0.3rem;
+}
+
+.contact .form-group .form-element .btn {
+  width: 100%;
+  font-family: inherit;
+  padding: 1rem 0.3rem;
+  margin-top: 1.5rem;
+  border: 1px solid #333;
+  background-color: rgba(0, 0, 0, 0);
+}
+
+.contact .form-group .form-element textarea {
+  height: 5rem;
+  resize: none;
 }
 
 @media (max-width: 768px) {
